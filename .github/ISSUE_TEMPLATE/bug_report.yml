@@ -1,0 +1,27 @@
+name: Bug report
+description: Something returned the wrong data or an error envelope
+labels: [bug]
+body:
+  - type: textarea
+    id: command
+    attributes:
+      label: Command or MCP tool call
+      description: Exact `sfsu-agents ...` command or tool name + arguments.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Envelope output
+      description: Paste the JSON envelope (trim large `data` if needed, keep `error` and `evidence`).
+      render: json
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+  - type: input
+    id: version
+    attributes:
+      label: sfsu-agents version / Python version
+      placeholder: "0.1.0 / 3.12"

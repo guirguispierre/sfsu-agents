@@ -1,0 +1,15 @@
+name: Upstream change
+description: An SFSU page or endpoint changed shape (doctor/live tests failing)
+labels: [upstream]
+body:
+  - type: textarea
+    id: doctor
+    attributes:
+      label: "`sfsu-agents doctor` output"
+      render: json
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: What changed on the site (if known)
